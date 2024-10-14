@@ -1,4 +1,4 @@
-package com.mrololo.memory_info
+package matos.eloi.memory_info
 
 import android.app.ActivityManager
 import android.content.Context

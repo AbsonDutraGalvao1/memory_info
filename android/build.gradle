@@ -1,6 +1,6 @@
 package android
 
-group 'com.mrololo.memory_info'
+group 'matos.eloi.memory_info'
 version '1.0-SNAPSHOT'
 
 buildscript {
@@ -29,7 +29,7 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 34
 
-    namespace 'com.mrololo.memory_info'
+    namespace 'matos.eloi.memory_info'
 
 
     compileOptions {
