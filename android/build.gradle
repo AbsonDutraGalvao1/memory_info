@@ -1,15 +1,17 @@
-group 'matos.eloi.memory_info'
+package android
+
+group 'com.mrololo.memory_info'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.6.10'
+    ext.kotlin_version = '1.8.0'
     repositories {
         google()
-        mavenCentral()
+        jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'com.android.tools.build:gradle:8.3.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -17,7 +19,7 @@ buildscript {
 rootProject.allprojects {
     repositories {
         google()
-        mavenCentral()
+        jcenter()
     }
 }
 
@@ -25,23 +27,26 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 31
-    namespace 'com.example.myapp'
+    compileSdkVersion 34
+
+    namespace 'com.mrololo.memory_info'
+
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = 17
     }
+
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
-
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
     }
 }
 
